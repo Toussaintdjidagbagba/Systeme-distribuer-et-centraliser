@@ -1,0 +1,98 @@
+/* Par Emmanuel DJIDAGBAGBA */
+
+Exercice 1:
+
+Enoncer
+
+Ecrire un programme qui crée 3 processus fils. Et affiche le pid de chaque processus.
+
+
+Resolution :
+Programme dans le dossier exercice1
+
+Exercice 2:
+
+Enoncer :
+Le programme de l’exercice précédent crée une mémoire partagée dans laquelle il met la valeur 0.
+Chacun des processus (des trois processus) lit cette valeur, l’incrémente et actualise la valeur dans
+la mémoire partagée. Chaque processus fait ce ensemble de traitements 100 fois.
+1- Quel est la valeur finale dans la mémoire partagée ?
+2- Comment pouvez vous résoudre le problème ?
+3- Implémentez votre solution.
+
+Resolution :
+1- la valeur finale dans la memoire partagee est : 300
+2- Pour resourdre le probleme j'ai : 
+	un programme main.c qui est le programme principal qui 
+        met la valeur a 0, ensuite cree trois processus qui sont 
+lancer automatique l'un independant de l'autre. la premiere processus 
+lancer bloque la variable pour son utilisation jusqu'a sa fin et libere la
+memoire au second de continuer et de meme pour le troisieme.
+3- implementation :
+Voir le programme dans le dossier exercice2
+
+Exercice 3:
+
+Enoncer :
+
+Utilisez les processus et une mémoire partagée pour calculer le carré d’une matrice de dimension N.
+Chaque élément de la matrice est un entier de la forme
+1 2 .. N
+1 2 .. N
+1- Enoncez les problèmes que vous serez emmenés à résoudre.
+2- Montrez comment vous les résolvez.
+3- Implémentez votre solution.
+
+Resolution :
+1- les problemes a resoudre sont :
+	Creation des differentes memoire a utiliser par plusieurs processus
+	Echange de variable entre les memoire
+	la saisir des valeurs a inserrer dans la matrice
+	le calcule de la matrice et a inserrer dans des differentes memoire
+	le calcul du resultat par plusieurs processus
+        La cle partager pour les memoires
+	L'affichage de la matrice resultat
+
+2- Resolution: en commencer par cree trois cle differente pour attacher a trois memoire qui seront partager tels que les indices i, j et la valeur cij
+ensuite attribuer a chaque processus son i, j et le resultat de la matrice dans cij tout en ayant la matrice a calculer au prealabre
+enfin afficher les cij calculer et retourner par processus
+
+3- j'ai pas implementer faute de manque de maitrise de la creation de trois cle differenta utiliser par les autres processus afin de pouvoir attribuer les i, j, cij
+
+Exercice 4:
+
+Enoncer :
+Ecrire un client et un serveur qui s’envoie des fichiers.
+1- Enoncez les problèmes que vous serez emmenés à résoudre.
+2- Montrez comment vous les résolvez.
+3- Implémentez votre solution.
+
+Resolution:
+- Creation de deux programmes different client et serveur
+- Definition du fichier a envoyer
+- l'envoye du fichier afin que le programme serveur recois et afficher
+- la reception par le serveur et affiche le fichier envoyer
+- la reception brute du fichier dans le dossier du serveur
+
+la solution a ces problemes se trouve dans le dossier exercice 4.
+
+Exercice 5:
+Enoncer 
+Ecrire un client qui envoie de façon périodique (toutes les 10secondes) une requête à un serveur.
+Lorsque le serveur reçoit la requêt il crée deux processus qui modifie de façon concurrente une
+valeur partagée dans une mémoire partagée.
+1- Enoncez les problèmes que vous serez emmenés à résoudre.
+2- Montrez comment vous les résolvez.
+3- Implémentez votre solution.
+
+
+Resolution:
+- Creation de deux programmes different cleint et serveur
+- Definition du fichier a envoyer
+- l'envoye de la requete afin que le programme serveur recois et cree les deux processus
+- la reception par le serveur et affiche le fichier envoyer
+- la reception brute du fichier dans le dossier du serveur
+- l'envoye de la requete suivant le temps periodique de 10 secondes
+- Modification de la memoire partager par les deux processus.
+
+Programme se trouvant dans le dossier exercice5
